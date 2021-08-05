@@ -2,16 +2,49 @@
 
 :root{
     --color-nav : #3c6382;
-    --color-bg-title-frame: #0a3d62;
+    --color-bg-title-frame: linear-gradient(0.25turn, #033e75, #0a5190);
     --color-shadow-frame:#A4A4A4;
     --color-target-frame:#b71540;
     --color-frame: #fafafa;
     --color-text: #fafafa;
+    --color-background: #f5f0e6;
+    --color-details: linear-gradient(0.25turn, #760d0d, #560000);
 }
 
 
+section:nth-child(2) details{
+    background: linear-gradient(0.25turn, #033e75, #0a5190);
+}
+
+
+section:nth-child(3) details{
+    background: linear-gradient(0.25turn, #760d0d, #560000);
+}
+
+section:nth-child(4) details{
+    background: linear-gradient(0.25turn, #84441f, #563500);
+}
+
+section:nth-child(5) details{
+    background: linear-gradient(0.25turn, #292929, #000000);
+}
+
+section:nth-child(6) details{
+    background: #89042a;
+}
+
+section:nth-child(7) details{
+    background: #13223E;
+}
+
+section:nth-child(8) details{
+    background: linear-gradient(0.25turn, #033e75, #0a5190);
+}
+
+
+
 html{
-    background-color: #D8D8D8;
+    background-color: var(--color-background);
     scroll-behavior: smooth;
 }
 
@@ -94,7 +127,10 @@ nav ul li:hover .sousmenu{
 
 /* menu déroulant Fin */
 
-/*section*/
+
+
+
+/*section interieur*/
 
 main section details h3{
     margin-top: 2rem;
@@ -178,6 +214,7 @@ section details p{
     height: 100%;
   }
 
+  /*section interieur*/
 
 main > section{
     background-color: var(--color-frame);
@@ -189,7 +226,7 @@ main > section{
 }
 
 main > section > h2{
-    background-color: var(--color-bg-title-frame);
+    background: var(--color-bg-title-frame);
     color: var(--color-text);
     border-radius: .5rem;
     line-height: 6.0rem;
@@ -197,6 +234,12 @@ main > section > h2{
     text-align: center;
     max-width: 90rem;
     margin: 0 auto;
+}
+
+main > section:nth-child(1) > h2{
+    color: #000000;
+    font-size: 3.5rem;
+    background: #fafafa;
 }
 
 main > section > p{
@@ -209,8 +252,8 @@ main > section > details{
 }
 
 
+
 section details{
-    background-color: #1f5c6e;
     border-radius: 1rem;
     padding: 1rem;
     max-width: 100rem;
@@ -233,6 +276,32 @@ section details summary{
 section details ul li{
     margin: 1rem 5rem;
 }
+
+/*section presentation*/
+
+
+.profile{
+    max-width: 30rem;
+    float: right;
+    margin-right: 1rem;
+}
+
+
+section:nth-child(1) img{
+    max-width: 100%;
+    border-radius: 50%;
+    border: solid #000000 .3rem;
+    }
+
+section:nth-child(1) p{
+    display: block;
+    min-height: 22rem;
+}
+section:nth-child(1){
+    max-width: 50%;
+}
+
+/* ------- */
 
 body footer{
     padding: 1rem;
@@ -297,6 +366,16 @@ body footer p{
 
     main > section{
         max-width: 95%;
+    }
+
+    section:nth-child(1){
+        max-width: 95%;
+    }
+
+    .profile{
+        margin: 0 auto;
+        float: none;
+        max-width: 20rem;
     }
 
     body nav ul li{
