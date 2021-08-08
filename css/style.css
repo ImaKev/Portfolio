@@ -2,42 +2,46 @@
 
 :root{
     --color-nav : #3c6382;
-    --color-bg-title-frame: linear-gradient(0.25turn, #033e75, #0a5190);
+    --color-bg-title-frame: linear-gradient(0.25turn, #473206, #816729);
+    --color-bg-detail-frame: linear-gradient(0.25turn, #064a80, #085bac);
     --color-shadow-frame:#A4A4A4;
-    --color-target-frame:#b71540;
+    --color-target-frame:#b98932;
     --color-frame: #fafafa;
     --color-text: #fafafa;
     --color-background: #f5f0e6;
     --color-details: linear-gradient(0.25turn, #760d0d, #560000);
 }
 
+section details{
+    background: var(--color-bg-detail-frame);
+}
 
-section:nth-child(2) details{
-    background: linear-gradient(0.25turn, #033e75, #0a5190);
+section:nth-child(2) details .contentsection{
+    background: rgba(86, 86, 87, 1);
 }
 
 
-section:nth-child(3) details{
+section:nth-child(3) details .contentsection{
     background: linear-gradient(0.25turn, #760d0d, #560000);
 }
 
-section:nth-child(4) details{
+section:nth-child(4) details .contentsection{
     background: linear-gradient(0.25turn, #84441f, #563500);
 }
 
-section:nth-child(5) details{
+section:nth-child(5) details .contentsection{
     background: linear-gradient(0.25turn, #292929, #000000);
 }
 
-section:nth-child(6) details{
+section:nth-child(6) details .contentsection{
     background: #89042a;
 }
 
-section:nth-child(7) details{
+section:nth-child(7) details .contentsection{
     background: #13223E;
 }
 
-section:nth-child(8) details{
+section:nth-child(8) details .contentsection{
     background: linear-gradient(0.25turn, #033e75, #0a5190);
 }
 
@@ -95,7 +99,7 @@ body nav li img{
 
 .sousmenu{
     position: absolute;
-    background-color: rgb(167, 129, 83);
+    background-color: #b98932;
     z-index: 1000;
     max-width: 30rem;
     border-radius: 0 0 1rem 1rem;
@@ -112,9 +116,10 @@ body nav li img{
 }
 
 .sousmenu li::before{
-    content: "•";
-    font-size: 5rem;
-    vertical-align: -1.2rem;
+    content: "✦";
+    color: #fafafa;
+    font-size: 3rem;
+    vertical-align: -0.5rem;
     margin-right: 1rem;
 }
 
@@ -130,7 +135,15 @@ nav ul li:hover .sousmenu{
 
 
 
-/*section interieur*/
+/*section interieur debut*/
+
+
+.contentsection{
+    border-radius: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+}
 
 main section details h3{
     margin-top: 2rem;
@@ -142,6 +155,9 @@ main section details h3{
     font-size: 3rem;
 }
 
+main section details summary{
+    font-weight: bold;
+}
 
 .titresectionimage{
     margin: 2rem auto;
@@ -214,7 +230,33 @@ section details p{
     height: 100%;
   }
 
-  /*section interieur*/
+  section details div p{
+    font-size: 2rem;
+  }
+
+  /*section interieur fin*/
+
+  /* detail competences debut */
+
+.competences details:nth-child(2) div .listimage ul li{
+    width: calc((100% / 8) - (.5rem*2));
+}
+
+.competences details:nth-child(2) div .listimage ul li img:hover{
+    transform: scale(1);
+}
+
+#listlogo ul li img, .displaylogo{
+    border-radius: 30%;
+}
+#listlogo ul li img:hover, .displaylogo:hover{
+    background-color: rgba(86, 86, 87, 0.97);
+    transition-duration: 0.2s;
+    box-shadow: .5rem .5rem 1.5rem 2rem rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+}
+
+  /* detail competences fin */
 
 main > section{
     background-color: var(--color-frame);
@@ -284,6 +326,8 @@ section details ul li{
     max-width: 30rem;
     float: right;
     margin-right: 1rem;
+    margin-left: 2rem;
+    margin-top: 3rem;
 }
 
 
@@ -309,7 +353,7 @@ body footer{
 
 body footer h3{
     padding: .5rem;
-    background-color: var(--color-bg-title-frame);
+    background: var(--color-bg-title-frame);
     max-width: 20rem;
     display: block;
     margin: 2rem auto;
@@ -348,6 +392,13 @@ body footer p{
 
 
 @media screen and (max-width: 700px){
+
+    #listlogo ul li img:hover, .displaylogo:hover{
+        background: none;
+        transition-duration: none;
+        box-shadow: none;
+        padding: none;
+    }
 
     body nav{
         background-color: #fafafa;
@@ -404,8 +455,8 @@ body footer p{
     }
 
     .listimage ul li img:hover{
-        transform: scale(1);
-        transition-duration: 0.2s;
+        transform: none;
+        transition-duration: none;
     }
 
     .listimage {
